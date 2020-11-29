@@ -3539,7 +3539,7 @@ const github = __webpack_require__(469);
       assignees: assignees ? assignees.split('\n') : undefined,
     });
 
-    core.setOutput('issue', JSON.stringify(response.data, null, '\t'));
+    core.setOutput('issue', JSON.stringify(response.data));
   } catch (error) {
     core.setFailed(error.message);
   }

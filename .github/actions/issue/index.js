@@ -16,7 +16,7 @@ const github = require('@actions/github');
       assignees: assignees ? assignees.split('\n') : undefined,
     });
 
-    core.setOutput('issue', JSON.stringify(response.data, null, '\t'));
+    core.setOutput('issue', JSON.stringify(response.data));
   } catch (error) {
     core.setFailed(error.message);
   }
