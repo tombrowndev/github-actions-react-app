@@ -3531,15 +3531,15 @@ const github = __webpack_require__(469);
     const body = core.getInput('body');
     const assignees = core.getInput('assignees');
 
-    const octokit = await github.getOctokit(token);
-    const response = octokit.issues.create({
+    const octokit = github.getOctokit(token);
+    const response = await octokit.issues.create({
       ...github.context.repo,
       title,
       body,
       assignees: assignees ? assignees.split('\n') : undefined,
     });
 
-    core.setOutput('issue', JSON.stringify(response.data));
+    core.setOutput('issue', JSON.stringify(response.data, null, '\t'));
   } catch (error) {
     core.setFailed(error.message);
   }
