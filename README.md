@@ -1,3 +1,5 @@
+![](https://github.com/tombrowndev/github-actions-react-app/workflows/CI/badge.svg?branch=develop&event=push)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with
