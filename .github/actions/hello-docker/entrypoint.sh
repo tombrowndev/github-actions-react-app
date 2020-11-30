@@ -16,4 +16,4 @@ echo 'some stuff'
 echo 'some stuff'
 echo '::endgroup::'
 
-echo "{HELLO}={hello}" >> $GITHUB_ENV
+echo "HELLO=hello" >> $GITHUB_ENV
